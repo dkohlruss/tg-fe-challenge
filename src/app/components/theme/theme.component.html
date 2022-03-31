@@ -5,31 +5,31 @@
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Theme Name</mat-label>
             <input matInput formControlName="name" placeholder="Eg. My Cool Theme">
-            <mat-error *ngIf="themeForm.controls.name.invalid">{{getErrorMessage('name')}}</mat-error>
+            
         </mat-form-field>
     </div>
     <div class="themeBackground">
       <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Background Color</mat-label>
           <input matInput formControlName="backgroundColor" placeholder="Eg. #FFFFFF">
-          <mat-error *ngIf="themeForm.controls.backgroundColor.invalid">{{getErrorMessage('backgroundColor')}}</mat-error>
+          
       </mat-form-field>
     </div>
     <div class="themeName">
       <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Button Color</mat-label>
           <input matInput formControlName="buttonColor" placeholder="Eg. #FFFFFF">
-          <mat-error *ngIf="themeForm.controls.buttonColor.invalid">{{getErrorMessage('buttonColor')}}</mat-error>
+          
       </mat-form-field>
     </div>
-    <div class="themeHtmlPreview" [style.background]="themeForm.controls.backgroundColor.value">
+    <div class="themeHtmlPreview">
       <h2>{{ themeTitle }}</h2>
       <img src="assets/guest_logo.svg" width="100" />
-      <button mat-raised-button [style.background]="themeForm.controls.buttonColor.value" disabled>Sample Button</button>
+      <button mat-raised-button disabled>Sample Button</button>
     </div>
 
     <div class="submitButton">
-      <button mat-raised-button color="primary" (click)="submit()" [disabled]="themeForm.invalid || !themeForm.dirty">Submit!</button>
+      <button mat-raised-button color="primary" (click)="submit()" [disabled]="">Submit!</button>
     </div>
   </form>
 </div>

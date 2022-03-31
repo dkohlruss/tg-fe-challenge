@@ -65,8 +65,6 @@ export class VeryRealApiService {
         };
       }
 
-      console.log(theme);
-
       return theme;
     })
 
