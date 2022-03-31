@@ -22,10 +22,6 @@ export class ThemeComponent implements OnInit {
       required: 'An entry is required',
       pattern: 'Please enter a valid hex code'
     },
-    buttonColor: {
-      required: 'An entry is required',
-      pattern: 'Please enter a valid hex code'
-    }
   }
  
   constructor(
@@ -46,7 +42,6 @@ export class ThemeComponent implements OnInit {
         id: '',
         name: '',
         backgroundColor: '',
-        buttonColor: '',
       },
     );
     this.themeForm.markAsPristine();
